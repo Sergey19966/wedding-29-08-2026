@@ -1263,7 +1263,7 @@ header.scrolled{
    DESCTOP
 ======================================= */
 
-@media(max-width: 769px) {
+@media(min-width: 769px) {
 	
 	.overlay{
     display:none;
