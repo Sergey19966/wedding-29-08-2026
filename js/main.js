@@ -87,13 +87,13 @@ window.addEventListener("scroll",()=>{
 });
 
 const menuToggle = document.getElementById("menuToggle");
-const nav = document.querySelector("nav");
+const nav = document.querySelector("mainNav");
 
 menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-document.querySelectorAll("nav a").forEach(link => {
+document.querySelectorAll("#mainNav a").forEach(link => {
 
     link.addEventListener("click", () => {
         nav.classList.remove("active");
