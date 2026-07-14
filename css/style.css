@@ -1214,7 +1214,7 @@ header.scrolled{
    MOBILE
 ======================================= */
 
-@media screen and (max-width: 768px) {
+@media(max-width: 768px) {
 
     header {
 
@@ -1260,6 +1260,10 @@ header.scrolled{
     .hero-image {
 
         width: 100%;
+		
+		display: flex;
+		
+		justify-content: center;
 
     }
 
@@ -1269,6 +1273,8 @@ header.scrolled{
         max-width: 320px;
         margin: auto;
         display: block;
+		height: auto;
+		object-fit: cover;
 
     }
 
