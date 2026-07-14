@@ -53,26 +53,36 @@ window.addEventListener("scroll",()=>{
     }
 });
 
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mainNav");
-const overlay = document.getElementById("menuOverlay");
+document.addEventListener("DOMContentLoaded", () => {
 
-function toggleMenu(){
-    mobileMenu.classList.toggle("active");
-    overlay.classList.toggle("active");
-    menuToggle.textContent =
-        mobileMenu.classList.contains("active")
-        ? "✕"
-        : "☰";
-}
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("nav");
+    const overlay = document.getElementById("overlay");
 
-menuToggle.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+    function closeMenu() {
 
-document.querySelectorAll(".mobile-menu a").forEach(link=>{
-    link.addEventListener("click",()=>{
-        mobileMenu.classList.remove("active");
-        overlay.classList.remove("active");
-        menuToggle.textContent="☰";
+        burger.classList.remove("active");
+        nav.classList.remove("show");
+        overlay.classList.remove("show");
+
+    }
+
+    function toggleMenu() {
+
+        burger.classList.toggle("active");
+        nav.classList.toggle("show");
+        overlay.classList.toggle("show");
+
+    }
+
+    burger.addEventListener("click", toggleMenu);
+
+    overlay.addEventListener("click", closeMenu);
+
+    document.querySelectorAll(".nav a").forEach(link => {
+
+        link.addEventListener("click", closeMenu);
+
     });
+
 });

@@ -20,40 +20,53 @@
 
 <body>
 
-<header>
+<header class="header">
 
     <div class="container header-container">
 
-        <div class="logo">
+        <a href="#" class="logo">
             A & E
-        </div>
+        </a>
 
-        <button id="menuToggle" class="menu-toggle">
-            ☰
+        <nav class="nav" id="nav">
+
+            <ul class="nav-list">
+
+                <li><a href="#about">История</a></li>
+
+                <li><a href="#timer">Дата</a></li>
+
+                <li><a href="#location">Место</a></li>
+
+                <li><a href="#schedule">Программа</a></li>
+
+                <li><a href="#dresscode">Дресс-код</a></li>
+
+                <li><a href="#rsvp">RSVP</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button
+            class="burger"
+            id="burger"
+            aria-label="Открыть меню">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
 
 </header>
 
+<div class="overlay" id="overlay"></div>
+
 <!-- Затемнение -->
 <div id="menuOverlay" class="menu-overlay"></div>
-
-<!-- Выезжающее меню -->
-<nav id="mainNav" class="mobile-menu">
-
-    <ul>
-
-        <li><a href="#about">История</a></li>
-        <li><a href="#timer">Дата</a></li>
-        <li><a href="#location">Место</a></li>
-        <li><a href="#schedule">Программа</a></li>
-        <li><a href="#dresscode">Дресс-код</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
-
-    </ul>
-
-</nav>
 
 <section class="hero">
 
