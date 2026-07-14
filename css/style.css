@@ -437,6 +437,39 @@ section {
 
 }
 
+.timer {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 15px;
+
+}
+
+@media (max-width:768px){
+
+.timer{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.timer.item{
+
+    width:100%;
+    height:110px;
+
+}
+
+.timer span{
+
+    font-size:36px;
+
+}
+
+}
+
 /* =======================================
    МЕСТО ПРОВЕДЕНИЯ
 ======================================= */
@@ -473,7 +506,7 @@ section {
 
 .location-card p {
 
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 
     color: #666;
 
@@ -493,7 +526,7 @@ section {
 
     width: 100%;
 
-    height: 420px;
+    height: 260px;
 
     border: none;
 
@@ -578,6 +611,36 @@ section {
     border-radius: 50%;
 
     box-shadow: 0 0 0 4px #d8c7b5;
+
+}
+
+@media(max-width:768px){
+
+.timeline{
+
+    padding-left:25px;
+
+}
+
+.timeline-item{
+
+    display:block;
+
+    margin-bottom:35px;
+
+}
+
+.time{
+
+    margin-bottom:10px;
+
+}
+
+.event{
+
+    padding:20px;
+
+}
 
 }
 
@@ -668,7 +731,7 @@ section {
 
     justify-content: center;
 
-    gap: 25px;
+    gap: 12px;
 
     flex-wrap: wrap;
 
@@ -678,9 +741,9 @@ section {
 
 .color {
 
-    width: 90px;
+    width: 55px;
 
-    height: 90px;
+    height: 55px;
 
     border-radius: 50%;
 
@@ -743,6 +806,8 @@ section {
     max-width: 700px;
 
     margin: auto;
+	
+	width: 100%;
 
 }
 
@@ -822,7 +887,7 @@ textarea {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: 1fr;
 
     gap: 35px;
 
@@ -834,7 +899,7 @@ textarea {
 
     background: white;
 
-    padding: 40px;
+    padding: 25px;
 
     text-align: center;
 
@@ -902,13 +967,13 @@ footer p {
 
     position: fixed;
 
-    right: 30px;
+    right: 15px;
 
-    bottom: 30px;
+    bottom: 15px;
 
-    width: 55px;
+    width: 45px;
 
-    height: 55px;
+    height: 45px;
 
     border: none;
 
@@ -1145,20 +1210,99 @@ header.scrolled{
 
 }
 
-@media((max-width:900px){
+/* =======================================
+   MOBILE
+======================================= */
 
-.hero-wrapper{
+@media screen and (max-width: 768px) {
 
-    flex-direction:column-reverse;
+    header {
 
-    text-align:center;
+        position: fixed;
+        padding: 10px 0;
 
-}
+    }
 
-.hero-image img{
+    .logo {
 
-    max-width:350px;
+        font-size: 22px;
 
-}
+    }
+
+    nav {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+        padding: 120px 20px 60px;
+
+    }
+
+    .hero-wrapper {
+
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+
+    }
+
+    .hero-text {
+
+        width: 100%;
+
+    }
+
+    .hero-image {
+
+        width: 100%;
+
+    }
+
+    .hero-image img {
+
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+        display: block;
+
+    }
+
+    h1 {
+
+        font-size: 42px;
+        line-height: 1.1;
+
+    }
+
+    h2 {
+
+        font-size: 32px;
+
+    }
+
+    .date {
+
+        font-size: 22px;
+
+    }
+
+    p {
+
+        font-size: 16px;
+
+    }
+
+    .btn {
+
+        width: 100%;
+        max-width: 320px;
+        margin: 25px auto 0;
+
+    }
 
 }
