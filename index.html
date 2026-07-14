@@ -22,34 +22,38 @@
 
 <header>
 
-    <div class="container">
+    <div class="container header-container">
 
         <div class="logo">
             A & E
         </div>
-		
-		<button class="menu-toggle" id="menuToggle">
-			☰
-		</button>		
 
-        <nav id="mainNav">
-
-            <ul>
-
-                <li><a href="#about">История</a></li>
-                <li><a href="#timer">Дата</a></li>
-                <li><a href="#location">Место</a></li>
-                <li><a href="#schedule">Программа</a></li>
-                <li><a href="#dresscode">Дресс-код</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-
-            </ul>
-
-        </nav>
+        <button id="menuToggle" class="menu-toggle">
+            ☰
+        </button>
 
     </div>
 
 </header>
+
+<!-- Затемнение -->
+<div id="menuOverlay" class="menu-overlay"></div>
+
+<!-- Выезжающее меню -->
+<nav id="mainNav" class="mobile-menu">
+
+    <ul>
+
+        <li><a href="#about">История</a></li>
+        <li><a href="#timer">Дата</a></li>
+        <li><a href="#location">Место</a></li>
+        <li><a href="#schedule">Программа</a></li>
+        <li><a href="#dresscode">Дресс-код</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+
+    </ul>
+
+</nav>
 
 <section class="hero">
 
