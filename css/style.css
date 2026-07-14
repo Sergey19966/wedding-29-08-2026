@@ -1231,9 +1231,23 @@ header.scrolled{
 
     nav {
 
-        display: none;
+        display: block;
 
     }
+	
+	nav ul{
+
+    display:flex;
+
+    flex-wrap:nowrap;
+
+    overflow-x:auto;
+
+    gap:20px;
+
+    padding-bottom:10px;
+
+	}
 
     .hero {
 
