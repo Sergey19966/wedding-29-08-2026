@@ -1387,32 +1387,6 @@ header.scrolled{
         padding: 120px 20px 60px;
     }
 
-    .hero-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 40px;
-        text-align: center;
-    }
-
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-		display: flex;
-		justify-content: center;
-    }
-	
-    .hero-image img {
-        width: 100%;
-        max-width: 320px;
-        margin: auto;
-        display: block;
-		height: auto;
-		object-fit: cover;
-    }
-
     h1 {
         font-size: 42px;
         line-height: 1.1;
