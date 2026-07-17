@@ -337,11 +337,11 @@ p {
 
 .overlay{
 
-    position:fixed;
+    position: absolute;
 
     inset:0;
 
-    background:rgba(0,0,0,.45);
+    background: rgba(0,0,0,.35);
 
     opacity:0;
 
@@ -380,6 +380,7 @@ p {
 
 .hero-text{
     width:100%;
+	margin-bottom: 45px;
 }
 
 .subtitle{
@@ -433,12 +434,6 @@ p {
     line-height:1.1;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.35);
-}
-
 .hero h1 {
     margin-bottom: 20px;
 }
@@ -450,10 +445,6 @@ p {
 .date {
     font-size: 28px;
     margin-bottom: 25px;
-}
-
-.hero-text {
-    margin-bottom: 45px;
 }
 
 /* =======================================
@@ -485,9 +476,10 @@ section {
 }
 
 .timer {
-    display: flex;
+    display: grid;
+	grid-template-columns: repeat(4,1fr);
     justify-content: center;
-    gap: 35px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -530,33 +522,6 @@ section {
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
-}
-
-.timer {
-
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    gap: 15px;
-
-}
-
-@media (max-width:768px){
-
-.timer{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.timer.item{
-    width:100%;
-    height:110px;
-}
-
-.timer span{
-    font-size:36px;
-}
 
 }
 
@@ -1117,15 +1082,6 @@ header.scrolled{
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
-}header{
-
-    transition:.3s;
-
-}
-
-header.scrolled{
-    background:white;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 /* =======================================
@@ -1231,6 +1187,47 @@ header.scrolled{
         max-width: 320px;
         margin: 25px auto 0;
     }
+	
+	.timer{
+    grid-template-columns:repeat(2,1fr);
+	}
+
+	.timer.item{
+		width:100%;
+		height:110px;
+	}
+
+	.timer span{
+		font-size:36px;
+	}
+		
+	.hero-bottom{
+		display:flex;
+		flex-direction:column;
+		gap:35px;
+	}
+
+	.hero-image{
+		order:-1;
+	}
+
+	.hero-image img{
+		width:min(85vw,320px);
+		height:auto;
+		max-width:280px;
+		margin:auto;
+		display:block;
+	}
+
+	.hero-names{
+		text-align:center;
+	}
+
+	.hero-names .title{
+		font-size:44px;
+		line-height:1.1;
+	}
+	
 }
 
 .hero h1,
